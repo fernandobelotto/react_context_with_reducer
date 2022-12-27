@@ -1,9 +1,7 @@
 import { useContext } from "react";
 import { CounterContextDispatch } from "./CounterProvider";
 
-type Props = {};
-
-function CounterButtons({}: Props) {
+function CounterButtons() {
   console.log("rendering CounterButtons");
 
   const dispatch = useContext(CounterContextDispatch);

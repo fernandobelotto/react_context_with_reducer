@@ -1,9 +1,7 @@
 import CounterButtons from "./CounterButtons";
 import CounterValue from "./CounterValue";
 
-type Props = {};
-
-function Counter({}: Props) {
+function Counter() {
   console.log("rendering Counter");
   return (
     <>

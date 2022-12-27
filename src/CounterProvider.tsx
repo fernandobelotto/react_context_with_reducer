@@ -1,26 +1,24 @@
-import {
-  createContext,
-  PropsWithChildren,
-  useCallback,
-  useMemo,
-  useReducer,
-} from "react";
+import { createContext, Dispatch, PropsWithChildren, useReducer } from "react";
 
 const initialState = {
   counter: 0,
 };
 
+type Action = {
+  type: "increment" | "decrement";
+};
+
 type InitialState = typeof initialState;
 
-export const CounterContextDispatch = createContext<any>(
-  {} as { dispatch: any }
+export const CounterContextDispatch = createContext<Dispatch<Action>>(
+  {} as Dispatch<Action>
 );
 
 export const CounterContextState = createContext<InitialState>(
   {} as InitialState
 );
 
-const reducer = (state = initialState, action: any): InitialState => {
+const reducer = (state = initialState, action: Action): InitialState => {
   switch (action.type) {
     case "increment":
       return { ...state, counter: state.counter + 1 };

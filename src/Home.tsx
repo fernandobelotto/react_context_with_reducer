@@ -1,8 +1,6 @@
 import Counter from "./Counter";
 
-type Props = {};
-
-function Home({}: Props) {
+function Home() {
   console.log("rendering Home");
   return (
     <>

@@ -1,9 +1,7 @@
 import { useContext } from "react";
 import { CounterContextState } from "./CounterProvider";
 
-type Props = {};
-
-function CounterValue({}: Props) {
+function CounterValue() {
   console.log("rendering CounterValue");
 
   const { counter } = useContext(CounterContextState);
